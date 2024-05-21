@@ -31,6 +31,8 @@ export default function AuthModalComponent(){
               response.data["accessToken"],
               response.data["refreshToken"])
             modalContext.onClose()
+            modalContext.onClose();
+            window.location.reload();
           })
           .catch((error : XMLHttpRequest) => {
             if (error.response.status == 401) {
@@ -60,6 +62,7 @@ export default function AuthModalComponent(){
               response.data["accessToken"],
               response.data["refreshToken"])
             modalContext.onClose()
+            window.location.reload();
             })
             .catch((error : XMLHttpRequest) => {
               if (error.response.status == 500) {

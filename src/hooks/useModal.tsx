@@ -12,7 +12,6 @@ const useAuthModal = create<AuthModalStore>(
     (set) => ({
         isOpen: false,
         isLogin: false,
-        //whoooopsie...........
         onLogin: () => set({isOpen : true}),
         onOpen: () => set({isLogin: true}),
         onClose: () => set({isOpen: false}),
